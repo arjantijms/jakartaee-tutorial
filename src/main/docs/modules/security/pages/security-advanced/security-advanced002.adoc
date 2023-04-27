@@ -54,7 +54,7 @@ When using certificate-based mutual authentication, the following actions occur.
 
 [[certificate-based-mutual-authentication]]
 .Certificate-Based Mutual Authentication
-image::jakartaeett_dt_048.svg["Diagram of six steps in mutual authentication with certificates"]
+image::images:jakartaeett_dt_048.svg["Diagram of six steps in mutual authentication with certificates"]
 
 In user name/password-based mutual authentication, the following actions occur.
 
@@ -74,7 +74,7 @@ In user name/password-based mutual authentication, the following actions occur.
 
 [[username-password-based-mutual-authentication]]
 .User Name/Password-Based Mutual Authentication
-image::jakartaeett_dt_049.svg["Diagram of five steps in mutual authentication with user name and password"]
+image::images:jakartaeett_dt_049.svg["Diagram of five steps in mutual authentication with user name and password"]
 
 ==== Enabling Mutual Authentication over SSL
 

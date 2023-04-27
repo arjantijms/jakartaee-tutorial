@@ -218,7 +218,7 @@ public class SomeClass {
     ...
 }
 
-@Stateless 
+@Stateless
 public class MyBean extends SomeClass implements A  {
 
     @RolesAllowed("HR")
@@ -277,12 +277,12 @@ The following code sample illustrates the use of the `getCallerPrincipal` method
 +
 [source,java]
 ----
-@Stateless 
+@Stateless
 public class EmployeeServiceBean implements EmployeeService {
-    @Resource 
+    @Resource
     SessionContext ctx;
-    
-    @PersistenceContext 
+
+    @PersistenceContext
     EntityManager em;
 
     public void changePhoneNumber(...) {
@@ -318,9 +318,9 @@ The following code sample illustrates the use of the `isCallerInRole` method:
 +
 [source,java]
 ----
-@Stateless 
+@Stateless
 public class PayrollBean implements Payroll {
-    @Resource 
+    @Resource
     SessionContext ctx;
 
     public void updateEmployeeInfo(EmplInfo info) {
@@ -349,7 +349,7 @@ You can specify whether a caller's security identity should be used for the exec
 
 [[security-identity-propagation]]
 .Security Identity Propagation
-image::jakartaeett_dt_047.svg["Diagram of security identity propagation from client to intermediate container to target container"]
+image::images:jakartaeett_dt_047.svg["Diagram of security identity propagation from client to intermediate container to target container"]
 
 In this illustration, an application client is making a call to an enterprise bean method in one enterprise bean container.
 This enterprise bean method, in turn, makes a call to an enterprise bean method in another container.

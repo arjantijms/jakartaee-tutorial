@@ -50,7 +50,7 @@ This action is shown in <<initial-request>>.
 
 [[initial-request]]
 .Initial Request
-image::jakartaeett_dt_039.svg["Diagram of initial request from web client to web server for access to a protected resource"]
+image::images:jakartaeett_dt_039.svg["Diagram of initial request from web client to web server for access to a protected resource"]
 
 Since the client has not yet authenticated itself to the application environment, the server responsible for delivering the web portion of the application, hereafter referred to as the web server, detects this and invokes the appropriate authentication mechanism for this resource.
 For more information on these mechanisms, see <<security-mechanisms>>.
@@ -64,7 +64,7 @@ On the basis of the validation, the web server sets a credential for the user.
 
 [[initial-authentication]]
 .Initial Authentication
-image::jakartaeett_dt_040.svg["Diagram of initial authentication: server sends form to client, which sends authentication data to server for validation"]
+image::images:jakartaeett_dt_040.svg["Diagram of initial authentication: server sends form to client, which sends authentication data to server for validation"]
 
 ==== Step 3: URL Authorization
 
@@ -76,7 +76,7 @@ The web container then tests the user's credential against each role to determin
 
 [[url-authorization]]
 .URL Authorization
-image::jakartaeett_dt_041.svg["Diagram of URL authorization"]
+image::images:jakartaeett_dt_041.svg["Diagram of URL authorization"]
 
 The web server's evaluation stops with an "is authorized" outcome when the web server is able to map the user to a role.
 A "not authorized" outcome is reached if the web server is unable to map the user to any of the permitted roles.
@@ -87,7 +87,7 @@ If the user is authorized, the web server returns the result of the original URL
 
 [[fulfilling-the-original-request]]
 .Fulfilling the Original Request
-image::jakartaeett_dt_042.svg["Diagram of request fulfillment, showing server returning result to client"]
+image::images:jakartaeett_dt_042.svg["Diagram of request fulfillment, showing server returning result to client"]
 
 In our example, the response URL of a web page is returned, enabling the user to post form data that needs to be handled by the business-logic component of the application.
 See xref:getting-started-securing-web-applications[xrefstyle=full] for more information on protecting web applications.
@@ -99,7 +99,7 @@ The association is implemented as two related security contexts: one in the web 
 
 [[invoking-an-enterprise-bean-business-method]]
 .Invoking an Enterprise Bean Business Method
-image::jakartaeett_dt_043.svg["Diagram of authorization process between web component and enterprise bean"]
+image::images:jakartaeett_dt_043.svg["Diagram of authorization process between web component and enterprise bean"]
 
 The enterprise container is responsible for enforcing access control on the enterprise bean method.
 The container consults the security policy associated with the enterprise bean to determine the security roles that are permitted access to the method.

@@ -38,7 +38,7 @@ More information on mapping roles to users and groups can be found in <<setting-
 
 [[mapping-roles-to-users-and-groups]]
 .Mapping Roles to Users and Groups
-image::jakartaeett_dt_044.svg["Diagram of role mapping, showing creation of users and groups, definition of roles, and mapping of roles to users and groups"]
+image::images:jakartaeett_dt_044.svg["Diagram of role mapping, showing creation of users and groups, definition of roles, and mapping of roles to users and groups"]
 
 The following sections provide more information on realms, users, groups, and roles.
 

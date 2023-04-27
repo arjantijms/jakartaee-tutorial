@@ -32,7 +32,7 @@ For more information on Java SE security, visit https://docs.oracle.com/javase/8
 
 === Jakarta EE Security Mechanisms
 
-Jakarta EE security services are provided by the component container and can be implemented by using declarative or programmatic techniques (see <<securing-containers>>).
+Jakarta EE security services are provided by the component container and can be implemented by using declarative or programmatic techniques (see <<_securing_containers>>).
 Jakarta EE security services provide a robust and easily configured security mechanism for authenticating users and authorizing access to application functions and associated data at many different layers.
 Jakarta EE security services are separate from the security mechanisms of the operating system.
 

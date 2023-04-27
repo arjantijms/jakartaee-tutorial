@@ -218,7 +218,7 @@ When basic authentication is used, the following actions occur.
 
 [[http-basic-authentication-2]]
 .HTTP Basic Authentication
-image::jakartaeett_dt_045.svg["Diagram of four steps in HTTP basic authentication between client and server"]
+image::images:jakartaeett_dt_045.svg["Diagram of four steps in HTTP basic authentication between client and server"]
 
 ==== Form-Based Authentication
 
@@ -242,7 +242,7 @@ If the user is authorized, the server redirects the client to the resource by us
 
 [[form-based-authentication-2]]
 .Form-Based Authentication
-image::jakartaeett_dt_046.svg["Diagram of four steps in form-based authentication between client and server"]
+image::images:jakartaeett_dt_046.svg["Diagram of four steps in form-based authentication between client and server"]
 
 The section <<the-hello1-formauth-example-form-based-authentication-with-a-jakarta-faces-application>> is an example application that uses form-based authentication.
 
