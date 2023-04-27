@@ -1,5 +1,7 @@
 == Overview of Jakarta Security
 
+Updated for Jakarta EE 10 😁.
+
 Every enterprise that has either sensitive resources that can be accessed by many users or resources that traverse unprotected, open networks, such as the Internet, needs to be protected.
 
 Enterprise tier and web tier applications are made up of components that are deployed into various containers.
