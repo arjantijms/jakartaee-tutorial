@@ -21,14 +21,14 @@ A security role is a grouping of permissions that a given type of application us
 For example, in a payroll application, some users will want to view their own payroll information (employee), some will need to view others' payroll information (manager), and some will need to be able to change others' payroll information (payrollDept).
 The application developer would determine the potential users of the application and which methods would be accessible to which users.
 The application developer would then decorate classes or methods of the enterprise bean with annotations that specify the types of users authorized to access those methods.
-Using annotations to specify authorized users is described in <<specifying-authorized-users-by-declaring-security-roles>>.
+Using annotations to specify authorized users is described in <<_specifying_authorized_users_by_declaring_security_roles>>.
 +
 When one of the annotations is used to define method permissions, the deployment system will automatically require user name/password authentication.
 In this type of authentication, a user is prompted to enter a user name and password, which will be compared against a database of known users.
 If the user is found and the password matches, the roles that the user is assigned will be compared against the roles that are authorized to access the method.
 If the user is authenticated and found to have a role that is authorized to access that method, the data will be returned to the user.
 +
-Using declarative security is discussed in <<securing-an-enterprise-bean-using-declarative-security>>.
+Using declarative security is discussed in <<_securing_an_enterprise_bean_using_declarative_security>>.
 
 * Programmatic security: For an enterprise bean, code embedded in a business method that is used to access a caller's identity programmatically and that uses this information to make security decisions.
 Programmatic security is useful when declarative security alone is not sufficient to express the security model of an application.
@@ -36,7 +36,7 @@ Programmatic security is useful when declarative security alone is not sufficien
 In general, security management should be enforced by the container in a manner that is transparent to the enterprise beans' business methods.
 The programmatic security APIs described in this chapter should be used only in the less frequent situations in which the enterprise bean business methods need to access the security-context information, such as when you want to grant access based on the time of day or other nontrivial condition checks for a particular role.
 +
-Programmatic security is discussed in <<securing-an-enterprise-bean-programmatically>>.
+Programmatic security is discussed in <<_securing_an_enterprise_bean_programmatically>>.
 
 Some of the material in this chapter assumes that you have already read xref:enterprise-beans-2[xrefstyle=full], xref:getting-started-with-enterprise-beans[xrefstyle=full], and xref:introduction-to-security-in-the-jakarta-ee-platform[xrefstyle=full].
 
@@ -75,7 +75,7 @@ It is important to keep in mind that security roles are used to define the logic
 They should not be confused with the user groups, users, principals, and other concepts that exist in GlassFish Server.
 Note that the Jakarta Security requires that group principal names be mapped to roles of the same name by default, but that implementations of the standard may allow configuration of a different default.
 In GlassFish Server, you do not need to perform any additional steps to map the roles defined in the application to users, groups, and principals that are the components of the user database in the `file` realm.
-This mapping is set by default in the GlassFish Server Administration Console as described in <<mapping-roles-to-users-and-groups-2>>.
+This mapping is set by default in the GlassFish Server Administration Console as described in <<_mapping_roles_to_users_and_groups_2>>.
 
 The following sections show how an application developer uses declarative security to either secure an application or to create a security view to pass along to the deployer.
 
@@ -340,12 +340,12 @@ public class PayrollBean implements Payroll {
 ----
 
 You would use programmatic security in this way to dynamically control access to a method, for example, when you want to deny access except during a particular time of day.
-An example application that uses the `getCallerPrincipal` and `isCallerInRole` methods is described in <<the-converter-secure-example-securing-an-enterprise-bean-with-programmatic-security>>.
+An example application that uses the `getCallerPrincipal` and `isCallerInRole` methods is described in <<_the_converter_secure_example_securing_an_enterprise_bean_with_programmatic_security>>.
 
 === Propagating a Security Identity (Run-As)
 
 You can specify whether a caller's security identity should be used for the execution of specified methods of an enterprise bean or whether a specific run-as identity should be used.
-<<security-identity-propagation>> illustrates this concept.
+<<_security_identity_propagation>> illustrates this concept.
 
 [[security-identity-propagation]]
 .Security Identity Propagation
@@ -362,7 +362,7 @@ This technique is used when the target container trusts the intermediate contain
 * A specific identity is propagated to the target enterprise bean.
 This technique is used when the target container expects access using a specific identity.
 
-To propagate an identity to the target enterprise bean, configure a run-as identity for the bean, as described in <<configuring-a-components-propagated-security-identity>>.
+To propagate an identity to the target enterprise bean, configure a run-as identity for the bean, as described in <<_configuring_a_components_propagated_security_identity>>.
 Establishing a run-as identity for an enterprise bean does not affect the identities of its callers, which are the identities tested for permission to access the methods of the enterprise bean.
 The run-as identity establishes the identity that the enterprise bean will use when it makes calls.
 
