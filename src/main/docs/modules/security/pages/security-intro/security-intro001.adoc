@@ -48,7 +48,7 @@ In the following example, which is taken from the Jakarta EE Specification, the 
 In the first step of this example, the web client requests the main application URL.
 This action is shown in <<_initial_request>>.
 
-[[initial-request]]
+[[_initial_request]]
 .Initial Request
 image::images:jakartaeett_dt_039.svg["Diagram of initial request from web client to web server for access to a protected resource"]
 
@@ -62,7 +62,7 @@ The web client forwards the authentication data to the web server, where it is v
 The validation mechanism may be local to a server or may leverage the underlying security services.
 On the basis of the validation, the web server sets a credential for the user.
 
-[[initial-authentication]]
+[[_initial_authentication]]
 .Initial Authentication
 image::images:jakartaeett_dt_040.svg["Diagram of initial authentication: server sends form to client, which sends authentication data to server for validation"]
 
@@ -74,7 +74,7 @@ The security policy is derived from annotations or from the deployment descripto
 The web container then tests the user's credential against each role to determine whether it can map the user to the role.
 <<_url_authorization>> shows this process.
 
-[[url-authorization]]
+[[_url_authorization]]
 .URL Authorization
 image::images:jakartaeett_dt_041.svg["Diagram of URL authorization"]
 
@@ -85,19 +85,19 @@ A "not authorized" outcome is reached if the web server is unable to map the use
 
 If the user is authorized, the web server returns the result of the original URL request, as shown in <<_fulfilling_the_original_request>>.
 
-[[fulfilling-the-original-request]]
+[[_fulfilling_the_original_request]]
 .Fulfilling the Original Request
 image::images:jakartaeett_dt_042.svg["Diagram of request fulfillment, showing server returning result to client"]
 
 In our example, the response URL of a web page is returned, enabling the user to post form data that needs to be handled by the business-logic component of the application.
-See xref:getting-started-securing-web-applications[xrefstyle=full] for more information on protecting web applications.
+See xref:security-webtier/security-webtier.adoc[] for more information on protecting web applications.
 
 ==== Step 5: Invoking Enterprise Bean Business Methods
 
 The web page performs the remote method call to the enterprise bean, using the user's credential to establish a secure association between the web page and the enterprise bean, as shown in <<_invoking_an_enterprise_bean_business_method>>.
 The association is implemented as two related security contexts: one in the web server and one in the enterprise bean container.
 
-[[invoking-an-enterprise-bean-business-method]]
+[[_invoking_an_enterprise_bean_business_method]]
 .Invoking an Enterprise Bean Business Method
 image::images:jakartaeett_dt_043.svg["Diagram of authorization process between web component and enterprise bean"]
 

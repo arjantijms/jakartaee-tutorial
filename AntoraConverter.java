@@ -17,9 +17,14 @@ class AntoraConverter {
         while ((startIndex = str.indexOf(start, index)) != -1 && (endIndex = str.indexOf(end, startIndex + start.length())) != -1) {
             result.append(str, index, startIndex + start.length());
             String substring = str.substring(startIndex + start.length(), endIndex);
-            substring = substring.replace(fromChar, toChar);
-            result.append(prefix);
-            result.append(substring);
+            String updatedSubstring = substring.replace(fromChar, toChar);
+            // don't add the prefix if nothing has changed
+            if (!substring.equals(updatedSubstring)) {
+                result.append(prefix);
+                result.append(updatedSubstring);
+            } else {
+                result.append(substring);
+            }
             index = endIndex;
         }
         result.append(str, index, str.length());
@@ -36,12 +41,24 @@ class AntoraConverter {
         for (File file : files) {
             System.out.println("Evaluating file " + file.getAbsolutePath());
             String content = new String(Files.readAllBytes(file.toPath()));
+            int changeCount = 0;
+
             if (content.contains(("<<"))) {
                 System.out.println("=> Updating anchor links");
                 String modifiedContent = replaceBetween(content, "<<", ">>", "_",'-', '_');
                 Files.write(file.toPath(), modifiedContent.getBytes());
-            } else {
+                changeCount++;
+            }
+            if (content.contains(("[["))) {
+                System.out.println("=> Updating anchor names");
+                String modifiedContent = replaceBetween(content, "[[", "]]", "_", '-', '_');
+                Files.write(file.toPath(), modifiedContent.getBytes());
+                changeCount++;
+            }
+            if (changeCount == 0) {
                 System.out.println("=> (no changes necessary)");
+            } else {
+                System.out.println("=> " + changeCount + " changes made");
             }
         }
     }

@@ -347,7 +347,7 @@ An example application that uses the `getCallerPrincipal` and `isCallerInRole` m
 You can specify whether a caller's security identity should be used for the execution of specified methods of an enterprise bean or whether a specific run-as identity should be used.
 <<_security_identity_propagation>> illustrates this concept.
 
-[[security-identity-propagation]]
+[[_security_identity_propagation]]
 .Security Identity Propagation
 image::images:jakartaeett_dt_047.svg["Diagram of security identity propagation from client to intermediate container to target container"]
 

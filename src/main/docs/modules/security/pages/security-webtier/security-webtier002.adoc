@@ -216,7 +216,7 @@ When basic authentication is used, the following actions occur.
 
 <<_http_basic_authentication_2>> shows what happens when you specify HTTP basic authentication.
 
-[[http-basic-authentication-2]]
+[[_http_basic_authentication_2]]
 .HTTP Basic Authentication
 image::images:jakartaeett_dt_045.svg["Diagram of four steps in HTTP basic authentication between client and server"]
 
@@ -240,7 +240,7 @@ If the user is authorized, the server redirects the client to the resource by us
 
 <<_form_based_authentication_2>> shows what happens when you specify form-based authentication.
 
-[[form-based-authentication-2]]
+[[_form_based_authentication_2]]
 .Form-Based Authentication
 image::images:jakartaeett_dt_046.svg["Diagram of four steps in form-based authentication between client and server"]
 
