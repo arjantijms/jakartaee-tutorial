@@ -3,4 +3,4 @@
 * xref:security-webtier/security-webtier.adoc[]
 * xref:security-jakartaee/security-jakartaee.adoc[]
 * xref:security-api/security-api.adoc[]
-* xref:security-advanced/security-advanced001.adoc[]
+* xref:security-advanced/security-advanced.adoc[]
