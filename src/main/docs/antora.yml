@@ -1,6 +1,6 @@
 name: jakarta-ee-docs
 title: Jakarta EE Documentation
-version: 9
+version: 9.1
 asciidoc:
   attributes:
     source-language: asciidoc@
